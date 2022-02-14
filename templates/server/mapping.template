@@ -1,0 +1,20 @@
+using FluentNHibernate.Mapping;
+using ~!pascal-system-name!~.core.models;
+
+namespace ~!pascal-system-name!~.core.mapping
+{
+    public class ~!pascal-entity!~Map : ClassMap<~!pascal-entity!~>
+    {
+        public ~!pascal-entity!~Map()
+        {
+            Table("~!pascal-entity-plural!~");
+            Id(x => x.~!pascal-entity!~Id)
+                .GeneratedBy
+                .Identity()
+                .UnsavedValue(0);
+           ~!map-orm-values!~
+        }
+    }
+}
+
+

@@ -1,0 +1,67 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using ~!camel-system-name!~.core.models;
+
+namespace ~!camel-system-name!~.core.repositories
+{
+    public class ~!pascal!~Repository BaseRepository<~!pascal!~>
+    {
+        public static IList<~!pascal!~> Get(bool includeInactive=false)
+        {
+            try
+            {
+                using (var session = DataContext.GetSession())
+                {
+                    var query = session.QueryOver<~!pascal!~>();
+
+                    if(!includeInactive)
+                        query.Where(m => m.IsActive == true);
+    
+                    var results = query.List().ToList();
+                    return results;
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public static ~!pascal!~ Get(int id)
+        {
+            try
+            {
+                using (var session = DataContext.GetSession())
+                {
+                    var query = session.QueryOver<~!pascal!~>();
+                    query.Where(m => m.Id == id);
+                    var results = query.List().ToList();
+                    return results.SingleOrDefault();
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public static ~!pascal!~ Save(~!pascal!~ ~!camel!~)
+        {
+            try
+            {
+                BaseRepository.Save(~!camel!~);
+                return ~!camel!~;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+
+    }
+}
+
+
+

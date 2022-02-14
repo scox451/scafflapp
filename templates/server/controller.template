@@ -1,0 +1,57 @@
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using ~!camel-system-name!~.core.models;
+using ~!camel-system-name!~.core.services;
+using ~!camel-system-name!~.core.repositories;
+
+namespace ~!pascal-system-name!~.Web.Controllers
+{
+    [Route("api/[controller]")]
+    [ErrorLogging]
+    [ApiController]
+    public partial class CommonController : ControllerBase
+    {
+
+        [Authorize]
+        [HttpGet("[action]")]
+        public ~!pascal-entity!~ Create~!pascal-entity!~()
+        {
+            return new ~!pascal-entity!~();
+        }
+
+        [Authorize]
+        [HttpGet("[action]")]
+        public ~!pascal-entity!~ Get~!pascal-entity!~()
+        {
+            return  ~!pascal-entity!~Repository.Get~!pascal-entity!~());
+        }
+
+      
+        [Authorize]
+        [HttpGet("[action]/{~!camel-entity!~Id}")]
+        public ~!pascal-entity!~ Get~!pascal-entity!~(int ~!camel-entity!~Id)
+        {
+            var result = ~!pascal-entity!~Repository.Get~!pascal-entity!~(~!camel-entity!~Id);
+            return result;
+        }
+
+        [Authorize]
+        [HttpGet("[action]/{~!camel-entity!~Id}")]
+        public ~!pascal-entity!~ Get~!pascal-entity!~(int ~!camel-entity!~Id)
+        {
+            var result = ~!pascal-entity!~Repository.Get~!pascal-entity!~(~!camel-entity!~Id);
+            return result;
+        }
+
+
+
+        [Authorize]
+        [HttpPost("[action]")]
+        public ~!pascal-entity!~ Save~!pascal-entity!~([FromBody] ~!pascal-entity!~ ~!camel-entity!~)
+        {
+            var result = ~!pascal-entity!Repository.Save~!pascal-entity!(~!camel-entity!);
+            return result;
+        }
+   }
+}

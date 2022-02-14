@@ -1,0 +1,11 @@
+﻿using System;
+using System.Collections.Generic;
+using ~!pascal-system-name!~.Core.Models;
+
+namespace ~!pascal-system-name!~.Core.Models
+{
+    public  class ~!pascal!~
+    {
+        ~!cs-class-def!~
+    }
+}

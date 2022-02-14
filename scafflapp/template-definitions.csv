@@ -1,0 +1,11 @@
+Angular client,Typescript model,\templates\client\interface.template,src\app\shared\models\,~!kebab!~.ts
+Angular client,Component service,\templates\client\service.template,src\app\core\,~!kebab!~.service.ts
+Angular client,Component typescript,\templates\client\component.template,src\app\~!kebab!~\,~!kebab!~.component.ts
+Angular client,Component markup,\templates\client\view.template,src\app\~!kebab!~\,~!kebab!~.component.html
+Angular client,Component stylesheet,\templates\client\style.template,src\app\~!kebab!~\,~!kebab!~.component.scss
+Angular client,Component detail typescript,\templates\client\detail-component.template,src\app\~!kebab!~\~!detail-kebab!~\,~!detail-kebab!~.component.ts
+Angular client,Component detail markup,\templates\client\detail-view.template,src\app\~!kebab!~\~!detail-kebab!~\,~!detail-kebab!~.component.html
+nHibernate backend,WebApi controller,\templates\server\controller.template,Controllers\,CommonController.~!pascal!~.cs
+nHibernate backend,nHibernate mappping,\templates\server\mapping.template,mappings\,~!pascal!~Map.cs
+nHibernate backend,c# model,\templates\server\model.template,models\,~!pascal!~.cs
+nHibernate backend,nHibernate repo,\templates\server\repository.template,repositories\,~!pascal!Repository~.cs
